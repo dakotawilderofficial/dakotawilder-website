@@ -139,7 +139,7 @@ video {
 .page-hero-journal {
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.28), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/headerjournal.png");
+    url("../img/headers/header-journal.png");
 }
 .page-hero-record {
   background-image:
