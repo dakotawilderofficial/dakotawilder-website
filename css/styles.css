@@ -553,3 +553,16 @@ textarea {
     height: 38px;
   }
 }
+
+.journal-stack {
+  display: grid;
+  gap: 28px;
+}
+
+.journal-entry h2 {
+  margin-bottom: 18px;
+}
+
+.journal-entry p:last-child {
+  margin-bottom: 0;
+}
