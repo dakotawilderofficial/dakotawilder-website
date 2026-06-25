@@ -556,7 +556,7 @@ textarea {
 
 .journal-stack {
   display: grid;
-  gap: 28px;
+  gap: 32px;
 }
 
 .journal-entry h2 {
