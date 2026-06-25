@@ -134,7 +134,7 @@ video {
 .page-hero-story {
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.28), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/headerstory.png");
+    url("../img/headers/header-story.png");
 }
 .page-hero-journal {
   background-image:
@@ -144,12 +144,12 @@ video {
 .page-hero-record {
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.28), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/headerrecord.png");
+    url("../img/headers/header-record.png");
 }
 .page-hero-porch {
   background-image:
     linear-gradient(rgba(10, 6, 4, 0.28), rgba(10, 6, 4, 0.42)),
-    url("../img/headers/headerporch.png");
+    url("../img/headers/header-porch.png");
 }
 .social-rail {
   position: fixed;
