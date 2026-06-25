@@ -129,27 +129,27 @@ video {
   min-height: 520px;
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.35), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/header-music.png");
+    url("../img/headers/header-music.webp");
 }
 .page-hero-story {
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.28), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/header-story.png");
+    url("../img/headers/header-story.webp");
 }
 .page-hero-journal {
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.28), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/header-journal.png");
+    url("../img/headers/header-journal.webp");
 }
 .page-hero-record {
   background-image:
     linear-gradient(rgba(10, 7, 5, 0.28), rgba(10, 7, 5, 0.45)),
-    url("../img/headers/header-record.png");
+    url("../img/headers/header-record.webp");
 }
 .page-hero-porch {
   background-image:
     linear-gradient(rgba(10, 6, 4, 0.28), rgba(10, 6, 4, 0.42)),
-    url("../img/headers/header-porch.png");
+    url("../img/headers/header-porch.webp");
 }
 .social-rail {
   position: fixed;
