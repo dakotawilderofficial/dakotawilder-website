@@ -113,21 +113,10 @@
               favourite lyric, a memory, or just a simple "hello," we'd love to
               hear from you!
             </p>
-            <form
-              class="fan-form"
-              action="https://formspree.io/f/YOUR-FORM-ID"
-              method="POST"
-            >
-              <input
-                type="hidden"
-                name="_subject"
-                value="New Front Porch message for Dakota Wilder"
-              /><input name="name" placeholder="Your name" required /><textarea
-                name="message"
-                placeholder="Your message for Dakota"
-                required
-              ></textarea
-              ><button class="btn" type="submit">Send Message</button>
+            <form class="fan-form" onsubmit="event.preventDefault(); alert('Thanks for your message! The Front Porch message form will open soon.');">
+              <input name="name" placeholder="Your name" required>
+              <textarea name="message" placeholder="Your message for Dakota" required></textarea>
+              <button class="btn" type="submit">Send Message</button>
             </form>
             <p class="form-note">
               Replace YOUR-FORM-ID with your real Formspree form ID before
