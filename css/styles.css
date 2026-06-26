@@ -594,6 +594,10 @@ textarea {
   transform: scale(1.04);
 }
 
+.focus-top {
+    object-position: center 20%;
+}
+
 @media (max-width: 900px) {
   .gallery-grid {
     grid-template-columns: 1fr;
