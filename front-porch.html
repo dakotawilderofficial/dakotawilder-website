@@ -113,9 +113,13 @@
               favourite lyric, a memory, or just a simple "hello," we'd love to
               hear from you!
             </p>
-            <form class="fan-form" onsubmit="event.preventDefault(); alert('Thanks for your message! The Front Porch message form will open soon.');">
+            <<form class="fan-form" action="https://formspree.io/f/xdarggwl" method="POST">
               <input name="name" placeholder="Your name" required>
+              <input name="email" type="email" placeholder="Your email address">
               <textarea name="message" placeholder="Your message for Dakota" required></textarea>
+
+              <input type="hidden" name="_subject" value="New Front Porch message for Dakota Wilder">
+
               <button class="btn" type="submit">Send Message</button>
             </form>
           </div>
