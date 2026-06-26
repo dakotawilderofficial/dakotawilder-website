@@ -599,3 +599,22 @@ textarea {
     grid-template-columns: 1fr;
   }
 }
+
+.form-status {
+  min-height: 28px;
+  margin: 12px 0 0;
+  font-weight: 800;
+}
+
+.form-status.success {
+  color: var(--teal);
+}
+
+.form-status.error {
+  color: #d98b5f;
+}
+
+.fan-form .btn:disabled {
+  opacity: .75;
+  cursor: not-allowed;
+}
