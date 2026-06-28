@@ -622,3 +622,107 @@ textarea {
   opacity: .75;
   cursor: not-allowed;
 }
+
+.porch-feed-card h3 {
+  margin-bottom: 1.2rem;
+}
+
+.porch-note {
+  border-top: 1px solid rgba(247, 234, 212, 0.18);
+  padding: 1.15rem 0;
+}
+
+.porch-note:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.porch-note-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--cream);
+  font-weight: 900;
+}
+
+.porch-note-head span {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.porch-note-message {
+  margin: 0.8rem 0;
+  line-height: 1.55;
+}
+
+.dakota-reply {
+  margin-top: 0.8rem;
+  padding: 0.9rem;
+  border-radius: 16px;
+  background: rgba(56, 199, 199, 0.08);
+  border: 1px solid rgba(56, 199, 199, 0.22);
+}
+
+.dakota-reply strong {
+  color: var(--turquoise);
+}
+
+.dakota-reply p {
+  margin: 0.35rem 0 0;
+}
+
+.porch-message{
+
+    padding:25px;
+
+    margin-bottom:30px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+}
+
+.porch-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:18px;
+
+}
+
+.porch-header h3{
+
+    margin:0;
+
+}
+
+.porch-header span{
+
+    opacity:.65;
+
+}
+
+.fan-message{
+
+    line-height:1.8;
+
+}
+
+.dakota-reply{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    border-left:4px solid #3cced4;
+
+    background:rgba(60,206,212,.08);
+
+    border-radius:10px;
+
+}

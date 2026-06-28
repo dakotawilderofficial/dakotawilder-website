@@ -162,13 +162,17 @@
     }
   });
 </script>
-          </div>
+        </div>
           <div class="note-card">
-            <h3>
-              A selection of messages from fans will be shared here on The Front
-              Porch.
-            </h3>
-            <p></p>
+
+            <h2>The Front Porch</h2>
+
+            <div id="porchMessages">
+
+            Loading...
+
+            </div>
+
           </div>
         </div>
       </section>
@@ -176,6 +180,72 @@
     <footer class="site-footer">
       © Dakota Wilder · Singer. Storyteller. Small-town soul.
     </footer>
+    <script type="module">
+      import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
+
+      const supabaseUrl = "https://ypgxwzgcvnkssvhsqxai.supabase.co";
+      const supabaseKey = "sb_publishable_0Hg47TrZSDV_mkIGqpcbYQ_O8FzDR32";
+
+      const supabase = createClient(supabaseUrl, supabaseKey);
+      const porchMessages = document.getElementById("porchMessages");
+
+      async function loadPorchMessages() {
+      const { data, error } = await supabase
+        .from("front_porch_messages")
+        .select("name,country,message,dakota_reply,pinned,featured,created_at")
+        .eq("approved", true)
+        .eq("status", "approved")
+        .order("pinned", { ascending: false })
+        .order("featured", { ascending: false })
+        .order("created_at", { ascending: false })
+        .limit(6);
+
+      if (error) {
+        porchMessages.innerHTML = "<p>Porch notes couldn't load right now.</p>";
+        return;
+      }
+
+      if (!data || data.length === 0) {
+        porchMessages.innerHTML =
+          "<p>A selection of messages from fans will be shared here on The Front Porch.</p>";
+        return;
+      }
+
+      porchMessages.innerHTML = data
+      .map((msg) => `
+        <article class="porch-note">
+          <div class="porch-note-head">
+            <strong>${escapeHtml(msg.name || "Dakota fan")}</strong>
+            <span>${escapeHtml(msg.country || "")}</span>
+          </div>
+
+          <p class="porch-note-message">“${escapeHtml(msg.message || "")}”</p>
+
+          ${
+            msg.dakota_reply
+              ? `<div class="dakota-reply">
+                  <strong>Dakota replied:</strong>
+                  <p>${escapeHtml(msg.dakota_reply)}</p>
+                </div>`
+              : ""
+          }
+        </article>
+      `)
+      .join("");
+  }
+
+  function escapeHtml(value) {
+    return String(value)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+
+  loadPorchMessages();
+</script>
     <script src="js/main.js"></script>
+    <script type="module" src="js/frontporch.js"></script>
   </body>
 </html>
