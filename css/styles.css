@@ -110,7 +110,7 @@ video {
   position: relative;
   background:
     linear-gradient(rgba(10, 7, 5, 0.15), rgba(10, 7, 5, 0.2)),
-    url("../img/headers/hero-desktop.webp") center/cover no-repeat;
+    url("../img/headers/hero-desktop-v2.webp") center/cover no-repeat;
 }
 .hero:after {
   content: "";
